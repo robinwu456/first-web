@@ -1,7 +1,7 @@
 FROM quay.io/robinwu456/alpine:3.15.4
 COPY busybox-x86_64 /
 COPY info.cgi /
-COPY the7 /
+COPY the7 /the7
 RUN \
   apk update && \
   apk add --no-cache nano sudo bash wget curl git tree grep && \
