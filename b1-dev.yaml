@@ -1,0 +1,23 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: b1-dev
+spec:
+  replicas: 
+  selector:
+    matchLabels:
+      app: b1
+      env: dev
+  template:
+    metadata:
+      name: b1
+      labels:
+        app: b1
+        env: dev
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: b1
+          image: quay.io/robinwu456/alpine.httpd:1.0.0
+          imagePullPolicy: Always
