@@ -9,7 +9,7 @@ RUN \
   chmod +x info.cgi && \
   mv busybox-x86_64 bin/busybox1.28 && \
   mkdir -p /opt/www/cgi-bin && echo "let me go 2" > /opt/www/index.html && \
-  cp -r the7/* /opt/www/ && \
+  cp -r /the7/* /opt/www/ && \
   cp info.cgi /opt/www/cgi-bin/info
 
 ENTRYPOINT ["/bin/busybox1.28"]
